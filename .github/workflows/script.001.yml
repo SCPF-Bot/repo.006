@@ -32,6 +32,6 @@ jobs:
         file_glob: true
         prerelease: false
 
-   - name: Download
+    - name: Download
       run: |
         rm -rf Download
