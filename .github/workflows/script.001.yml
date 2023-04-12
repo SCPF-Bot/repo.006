@@ -23,10 +23,10 @@ jobs:
         MULL_V7A="21111000"
         #
         mkdir -p Downloads
-        wget --progress=dot:mega $FENNEC_URL_$FENNEC_64V8A.apk -O fennec.64.v8a.apk
-        wget --progress=dot:mega $FENNEC_URL_$FENNEC_V7A.apk -O fennec.v7a.apk
-        wget --progress=dot:mega $MULL_URL_$MULL_64V8A.apk -O mull.64.v8a.apk
-        wget --progress=dot:mega $MULL_URL_$MULL_V7A.apk -O mull.v7a.apk
+        wget --progress=dot:mega "$FENNEC_URL"_"$FENNEC_64V8A".apk -O fennec.64.v8a.apk
+        wget --progress=dot:mega "$FENNEC_URL"_"$FENNEC_V7A".apk -O fennec.v7a.apk
+        wget --progress=dot:mega "$MULL_URL"_"$MULL_64V8A".apk -O mull.64.v8a.apk
+        wget --progress=dot:mega "$MULL_URL"_"$MULL_V7A".apk -O mull.v7a.apk
         mv -v *.apk Downloads
 
     - name: Upload
