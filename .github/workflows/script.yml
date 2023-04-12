@@ -26,7 +26,7 @@ jobs:
         release_name: "Generation"
         tag: "${{ env.MAIN_TAG }}"
         checksums: sha256
-        file: /*.apk
+        file: /*.ap
         overwrite: true
         file_glob: true
         prerelease: false
