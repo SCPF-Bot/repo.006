@@ -29,6 +29,7 @@ jobs:
         wget --progress=dot:mega "$MULL_URL"_"$MULL_V7A".apk -O mull.v7a.apk
         mv -v *.apk Downloads
 
+
     - name: Upload
       uses: svenstaro/upload-release-action@master
       with:
