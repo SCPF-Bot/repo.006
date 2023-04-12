@@ -13,6 +13,7 @@ jobs:
 
     - name: Download
       run: |
+        echo "HOMEDIR=$(pwd)" >> $GITHUB_ENV
         echo "MAIN_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
         mkdir -p Download
         wget --progress=dot:mega -i .github/lists.txt
@@ -21,12 +22,11 @@ jobs:
     - name: Upload
       uses: termux/upload-release-action@master
       with:
-        repo_name: SCPF-Bot/repo.006
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         release_name: "Generation"
         tag: "${{ env.MAIN_TAG }}"
         checksums: sha256
-        file: "*"
+        file: ${{ env.HOMEDIR }}/*.apk
         overwrite: true
         file_glob: true
         prerelease: false
