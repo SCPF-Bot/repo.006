@@ -1,4 +1,4 @@
-name: Download and Upload
+name: Download and Upload (Revised)
 
 on:
   workflow_dispatch:
