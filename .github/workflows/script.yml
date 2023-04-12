@@ -22,7 +22,7 @@ jobs:
       uses: svenstaro/upload-release-action@master
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        repo_name: ${{ github.ref }}
+        repo_name: "${{ env.MAIN_TAG }}"
         tag: ${{ github.ref }}
         checksums: sha256
         file: Downloads/*apk
