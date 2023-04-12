@@ -13,20 +13,18 @@ jobs:
 
     - name: Download
       run: |
-        echo "HOMEDIR=$(pwd)" >> $GITHUB_ENV
         echo "MAIN_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
-        mkdir -p Download
+        mkdir -p Downloads
         wget --progress=dot:mega -i .github/lists.txt
-        mv *.apk Download
+        mv -v *.apk Downloads
 
     - name: Upload
-      uses: termux/upload-release-action@master
+      uses: svenstaro/upload-release-action@master
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        release_name: "Generation"
-        tag: "1.0.1"
+        tag: ${{ github.ref }}
         checksums: sha256
-        file: ${{ env.HOMEDIR }}/org.mozilla.fennec_fdroid_1111000.apk
+        file: Downloads/*apk
         overwrite: true
         file_glob: true
         prerelease: false
