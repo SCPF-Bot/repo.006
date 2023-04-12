@@ -21,11 +21,12 @@ jobs:
     - name: Upload
       uses: termux/upload-release-action@master
       with:
+        repo_name: SCPF-Bot/repo.006
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        release_name: "${{ github.run_id }}"
+        release_name: "Generation"
         tag: "${{ env.MAIN_TAG }}"
         checksums: sha256
-        file: Download/*.apk
+        file: /*.apk
         overwrite: true
         file_glob: true
         prerelease: false
