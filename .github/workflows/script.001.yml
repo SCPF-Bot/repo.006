@@ -1,0 +1,42 @@
+name: Download and Upload
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Start:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Checkout
+      uses: actions/checkout@main
+
+    - name: Download
+      run: |
+        echo "MAIN_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+        FENNEC_URL="https://f-droid.org/repo/org.mozilla.fennec_fdroid"
+        MULL_URL="https://f-droid.org/repo/us.spotco.fennec_dos"
+        #
+        FENNEC_64V8A="1111020"
+        FENNEC_V7A="1111000"
+        MULL_64V8A="21111020"
+        MULL_V7A="21111000"
+        #
+        mkdir -p Downloads
+        wget --progress=dot:mega $FENNEC_URL_$FENNEC_64V8A.apk -O fennec.64.v8a.apk
+        wget --progress=dot:mega $FENNEC_URL_$FENNEC_V7A.apk -O fennec.v7a.apk
+        wget --progress=dot:mega $MULL_URL_$MULL_64V8A.apk -O mull.64.v8a.apk
+        wget --progress=dot:mega $MULL_URL_$MULL_V7A.apk -O mull.v7a.apk
+        mv -v *.apk Downloads
+
+    - name: Upload
+      uses: svenstaro/upload-release-action@master
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        release_name: "Release ${{ env.MAIN_TAG }}"
+        tag: ${{ github.ref }}
+        checksums: sha256
+        file: Downloads/*apk
+        overwrite: true
+        file_glob: true
+        prerelease: false
