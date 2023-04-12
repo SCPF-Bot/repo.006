@@ -35,7 +35,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         release_name: "Release ${{ env.MAIN_TAG }}"
         tag: ${{ github.ref }}
-        checksums: sha256
         file: Downloads/*apk
         overwrite: true
         file_glob: true
