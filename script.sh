@@ -3,7 +3,7 @@
 echo "DECLARING VARIABLES"
 declare -A apks
 
-apks["com.google.android.apps.youtube.music.apk"]=dl_youtube-music
+apks["com.instagram.android.apk"]=dl_instagram
 
 ARM_V7A="arm-v7a"
 ARM64_V8A="arm64-v8a"
@@ -43,15 +43,15 @@ dl_apk()
     req "$url" "$output"
 }
 
-dl_youtube-music()
+dl_instagram()
 {
     local arch=$ARM64_V8A
-    echo "DOWNLOADING YOUTUBE MUSIC $arch"
+    echo "DOWNLOADING INSTAGRAM $arch"
     local last_ver
     last_ver="$version"
-    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
+    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=instagram-instagram" | get_largest_ver)}"
     echo "SELECTED VERSION: ${last_ver}"
-    local base_apk="com.google.android.apps.youtube.music.apk"
+    local base_apk="com.instagram.android.apk"
     if [ ! -f "$base_apk" ]
     then
         if [ "$arch" = "$ARM_V7A" ]
@@ -67,11 +67,11 @@ dl_youtube-music()
 	then
             local regexp_arch='x86</div>[^@]*@\([^"]*\)'
         fi
-        dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
+        dl_url=$(dl_apk "https://www.apkmirror.com/apk/instagram/instagram-instagram/instagram-instagram-${last_ver//./-}-release/" \
                 "$regexp_arch" \
                 "$base_apk")
         declare -r dl_url
-        echo "YOUTUBE MUSIC $arch v${last_ver}"
+        echo "INSTAGRAM $arch v${last_ver}"
     fi
 }
 
