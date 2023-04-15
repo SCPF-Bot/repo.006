@@ -59,7 +59,7 @@ dl_instagram()
             local regexp_arch='armeabi-v7a</div>[^@]*@\([^"]*\)'
 	elif [ "$arch" = "$ARM64_V8A" ]
 	then
-            local regexp_arch='(arm64-v8a)(nodpi)</div>[^@]*@\([^"]*\)'
+            local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
         elif [ "$arch" = "$X86_64" ]
 	then
             local regexp_arch='x86_64</div>[^@]*@\([^"]*\)'
