@@ -60,6 +60,7 @@ dl_instagram()
 	elif [ "$arch" = "$ARM64_V8A" ]
 	then
             local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
+            local regexp_dpi='nodpi</div>[^@]*@\([^"]*\)'
         elif [ "$arch" = "$X86_64" ]
 	then
             local regexp_arch='x86_64</div>[^@]*@\([^"]*\)'
@@ -69,6 +70,7 @@ dl_instagram()
         fi
         dl_url=$(dl_apk "https://www.apkmirror.com/apk/instagram/instagram-instagram/instagram-instagram-${last_ver//./-}-release/" \
                 "$regexp_arch" \
+                "$regexp_dpi" \
                 "$base_apk")
         declare -r dl_url
         echo "INSTAGRAM $arch v${last_ver}"
