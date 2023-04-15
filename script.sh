@@ -68,7 +68,8 @@ dl_instagram()
             local regexp_arch='x86</div>[^@]*@\([^"]*\)'
         fi
         dl_url=$(dl_apk "https://www.apkmirror.com/apk/instagram/instagram-instagram/instagram-instagram-${last_ver//./-}-release/" \
-                "$regexp_arch""(nodpi)" \
+                "$regexp_arch" \
+                "(nodpi)" \
                 "$base_apk")
         declare -r dl_url
         echo "INSTAGRAM $arch v${last_ver}"
