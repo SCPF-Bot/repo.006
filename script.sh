@@ -40,7 +40,7 @@ dl_apk()
     echo "$url"
     url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
     url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
-    new_url=$(echo "$url" | sed s/"(560,640dpi)"/"nodpi"/ | sed s/"apkm"/"apk"/)
+    new_url=$(echo "$url" | sed s/"(560,640dpi)"/"(nodpi)"/)
     req "$new_url" "$output"
 }
 
