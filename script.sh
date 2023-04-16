@@ -40,7 +40,7 @@ dl_apk()
     echo "$url"
     url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
     url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
-    req "$("$url" | sed -n 's/560,640/no')" "$output"
+    req "$url" "$output"
 }
 
 dl_instagram()
