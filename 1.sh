@@ -6,7 +6,7 @@ CHATGPT_ACCESS_TOKEN="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"
 
 # Set up variables for the Facebook Messenger API URL and access token
 MESSENGER_API_URL="https://graph.facebook.com/v12.0/me/messages"
-MESSENGER_ACCESS_TOKEN="618959066956666|WUkffeaJkDZPVq1sFh57dNdySHU"
+MESSENGER_ACCESS_TOKEN="EAAIy8KNRA3oBAOD1W8VfGJPIwlhsOO9SxsibJtTGY4M5ZCI4NXC2D3r3I1BMWGh7dcLEcYKPHkhoh2FhHhewlLZBORiIcUOqFSmu0WCMB2a027sZAzI2uqS3DVWI9Sv1nw74dTq54OtK1J7ZC8axaAGuK8O7bZCxXtzqut6wwoEOhvLJgZClGBqV9J9cOKgS0ZD"
 
 # Set up a variable for the Facebook Messenger webhook verification token
 
