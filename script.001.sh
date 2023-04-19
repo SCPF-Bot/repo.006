@@ -2,7 +2,7 @@
 
 # Set up variables for the ChatGPT API URL and access token
 CHATGPT_API_URL="https://api.chatgpt.com/v1/chat"
-CHATGPT_ACCESS_TOKEN="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"
+CHATGPT_ACCESS_TOKEN="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"
 
 # Set up variables for the Facebook Messenger API URL and access token
 MESSENGER_API_URL="https://graph.facebook.com/v12.0/me/messages"
