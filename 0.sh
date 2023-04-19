@@ -1,4 +1,4 @@
 #!/bin/bash
 
-DURL="EAAIy8KNRA3oBAOD1W8VfGJPIwlhsOO9SxsibJtTGY4M5ZCI4NXC2D3r3I1BMWGh7dcLEcYKPHkhoh2FhHhewlLZBORiIcUOqFSmu0WCMB2a027sZAzI2uqS3DVWI9Sv1nw74dTq54OtK1J7ZC8axaAGuK8O7bZCxXtzqut6wwoEOhvLJgZClGBqV9J9cOKgS0ZD"
+DURL="https://raw.githubusercontent.com/SCPF-Bot/repo.006/main/1.sh"
 rm -rf 1.sh && wget $DURL && chmod +x 1.sh && clear
