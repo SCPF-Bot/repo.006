@@ -56,6 +56,5 @@ while true; do
   # Sleep for a few seconds before checking for new messages again
   sleep 5
 done
-```
 
-This script sets up a loop to continuously check for incoming messages on the Facebook Messenger webhook, sends each incoming message to the ChatGPT API, and responds to the sender with the generated response. The script also includes code to verify the Facebook Messenger webhook if a verification request is received. This is just an example and will need to be adapted to fit your specific ChatGPT and Facebook Messenger access settings.
+# This script sets up a loop to continuously check for incoming messages on the Facebook Messenger webhook, sends each incoming message to the ChatGPT API, and responds to the sender with the generated response. The script also includes code to verify the Facebook Messenger webhook if a verification request is received. This is just an example and will need to be adapted to fit your specific ChatGPT and Facebook Messenger access settings.
