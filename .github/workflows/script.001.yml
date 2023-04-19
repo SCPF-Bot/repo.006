@@ -17,10 +17,10 @@ jobs:
         FENNEC_URL="https://f-droid.org/repo/org.mozilla.fennec_fdroid"
         MULL_URL="https://f-droid.org/repo/us.spotco.fennec_dos"
         #
-        FENNEC_64V8A="1111020"
-        FENNEC_V7A="1111000"
-        MULL_64V8A="21111020"
-        MULL_V7A="21111000"
+        FENNEC_64V8A="1120020"
+        FENNEC_V7A="1120000"
+        MULL_64V8A="21120020"
+        MULL_V7A="21120000"
         #
         mkdir -p Downloads
         wget --progress=dot:mega https://f-droid.org/repo/ie.equalit.ceno_2015894433.apk -O ceno.v7a.apk
