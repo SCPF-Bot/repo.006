@@ -17,10 +17,10 @@ jobs:
         FENNEC_URL="https://f-droid.org/repo/org.mozilla.fennec_fdroid"
         MULL_URL="https://f-droid.org/repo/us.spotco.fennec_dos"
         #
-        FENNEC_64V8A="1121020"
-        FENNEC_V7A="1121000"
-        MULL_64V8A="21121020"
-        MULL_V7A="21121000"
+        FENNEC_64V8A="1122020"
+        FENNEC_V7A="1122000"
+        MULL_64V8A="21122020"
+        MULL_V7A="21122000"
         #
         mkdir -p Downloads
         wget --progress=dot:mega "$FENNEC_URL"_"$FENNEC_64V8A".apk -O fennec.64.v8a.apk
