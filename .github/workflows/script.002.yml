@@ -20,12 +20,13 @@ jobs:
         wget --progress=dot:mega "https://secure.fanboy.co.nz/fanboy-mobile-notifications.txt" -O 5.txt
         wget --progress=dot:mega "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt" -O 6.txt
         wget --progress=dot:mega "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt" -O 7.txt
+        wget --progress=dot:mega "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/yt-distracting.txt" -O 8.txt
 
     - name: Merge and Remove Duplicate Lists
       run: |
-        cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt > hard-base.txt
-        cat 2.txt 5.txt 6.txt 7.txt > lite-base.txt
-        cat 1.txt 2.txt 5.txt 7.txt > unbreak-base.txt
+        cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt > hard-base.txt
+        cat 2.txt 5.txt 6.txt 7.txt 8.txt > lite-base.txt
+        cat 1.txt 2.txt 5.txt 7.txt 8.txt > unbreak-base.txt
         sort hard-base.txt | uniq > hard.txt && rm -rf hard-base.txt
         sort lite-base.txt | uniq > lite.txt && rm -rf lite-base.txt
         sort unbreak-base.txt | uniq > unbreak.txt && rm -rf unbreak-base.txt
