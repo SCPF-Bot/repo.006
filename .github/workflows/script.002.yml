@@ -21,9 +21,10 @@ jobs:
         wget --progress=dot:mega https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt -O 6.txt
         wget --progress=dot:mega https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt -O 7.txt
 
-    - name: Merge Lists
+    - name: Merge and Remove Duplicate Lists
       run: |
-        cat 1.txt 2.txt 6.txt > filter-1.txt
+        cat 1.txt 2.txt 6.txt > filter-1-base.txt
+        sort filter-1-base.txt | uniq > filter-1.txt
         mkdir -p Downloads && mv filter-1.txt Downloads
 
     - name: Upload Lists
