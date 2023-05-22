@@ -13,13 +13,13 @@ jobs:
     
     - name: Download Lists
       run: |
-        wget --progress=dot:mega https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt -O 1.txt
-        wget --progress=dot:mega https://easylist-downloads.adblockplus.org/advblock.txt -O 2.txt
-        wget --progress=dot:mega https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext -O 3.txt
-        wget --progress=dot:mega https://urlhaus.abuse.ch/downloads/text -O 4.txt
-        wget --progress=dot:mega https://secure.fanboy.co.nz/fanboy-mobile-notifications.txt -O 5.txt
-        wget --progress=dot:mega https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt -O 6.txt
-        wget --progress=dot:mega https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt -O 7.txt
+        wget --progress=dot:mega "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt" -O 1.txt
+        wget --progress=dot:mega "https://easylist-downloads.adblockplus.org/advblock.txt" -O 2.txt
+        wget --progress=dot:mega "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext" -O 3.txt
+        wget --progress=dot:mega "https://urlhaus.abuse.ch/downloads/text" -O 4.txt
+        wget --progress=dot:mega "https://secure.fanboy.co.nz/fanboy-mobile-notifications.txt" -O 5.txt
+        wget --progress=dot:mega "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt" -O 6.txt
+        wget --progress=dot:mega "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt" -O 7.txt
 
     - name: Merge and Remove Duplicate Lists
       run: |
