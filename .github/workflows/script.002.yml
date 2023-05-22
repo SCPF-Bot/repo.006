@@ -23,9 +23,14 @@ jobs:
 
     - name: Merge and Remove Duplicate Lists
       run: |
-        cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt > filter-1-base.txt
-        sort filter-1-base.txt | uniq > filter-1.txt
-        mkdir -p Downloads && mv filter-1.txt Downloads
+        cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt > hard-base.txt
+        cat 2.txt 6.txt 7.txt > lite-base.txt
+        cat 1.txt 2.txt > unbreak-base.txt
+        sort hard-base.txt | uniq > hard.txt
+        sort lite-base.txt | uniq > lite.txt
+        sorr unbreak-base.txt | uniq > unbreak.txt
+        rm -rf 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt
+        mkdir -p Downloads && mv *.txt Downloads
 
     - name: Upload Lists
       uses: svenstaro/upload-release-action@master
