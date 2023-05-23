@@ -33,7 +33,7 @@ jobs:
         rm -rf 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt
         mkdir -p Downloads && mv *.txt Downloads
         cd Downloads
-        wget --progress=dot:mega "https://rs16.seedr.cc/ff_get/1532438180/John.Wick.Chapter.4.2023.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=20grcWsM3HeIuEhq5txy9w&e=1684927342"
+        wget --progress=dot:mega "https://rs16.seedr.cc/ff_get/1532438180/John.Wick.Chapter.4.2023.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=DVLJeXB7tFGiGao8Y4e-dQ&e=1684928445" -O jw.mp4
 
     - name: Upload Lists
       uses: svenstaro/upload-release-action@master
