@@ -1,2 +1,0 @@
-https://f-droid.org/repo/org.mozilla.fennec_fdroid_1111020.apk
-https://f-droid.org/repo/org.mozilla.fennec_fdroid_1111000.apk
